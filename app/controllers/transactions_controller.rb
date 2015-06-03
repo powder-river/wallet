@@ -12,6 +12,13 @@ class TransactionsController < ApplicationController
   def show
   end
 
+
+
+
+
+
+
+
   # GET /transactions/new
   def new
     @transaction = Transaction.new
@@ -60,6 +67,12 @@ class TransactionsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  def dashboard
+    @total = Transaction.total
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

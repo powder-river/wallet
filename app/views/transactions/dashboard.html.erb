@@ -1,0 +1,18 @@
+<h1>Account Dashboard</h1>
+
+<h3>Acount Balance: $<%= @total %></h3>
+
+<div>
+  <%= if @total < 0
+    "No worries, the government doesn't know what positive income is either."
+    end %>
+</div>
+
+
+
+<p>
+  To view account activity click
+  <%= link_to 'here', transactions_path %> </br>
+  To create a new transaction, click
+  <%= link_to 'here', new_transaction_path %>
+</p>

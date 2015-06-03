@@ -1,10 +1,10 @@
 class Transaction < ActiveRecord::Base
 
 
-    def total_amount
-      :negotiation
+  def self.total
+    self.all.reduce(0) {|sum, t| sum + t.negotiation} 
 
-    end
+  end
 
 
 end

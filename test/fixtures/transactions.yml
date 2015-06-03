@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  negotiation: 9.99
+  negotiation: 100.0
 
 two:
   name: MyString
-  negotiation: 9.99
+  negotiation: 150.0
