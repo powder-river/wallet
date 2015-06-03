@@ -12,13 +12,6 @@ class TransactionsController < ApplicationController
   def show
   end
 
-
-
-
-
-
-
-
   # GET /transactions/new
   def new
     @transaction = Transaction.new
@@ -71,6 +64,7 @@ class TransactionsController < ApplicationController
 
   def dashboard
     @total = Transaction.total
+    @expenditure = Transaction.spent_this_month
   end
 
 

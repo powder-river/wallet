@@ -1,11 +1,17 @@
 <h1>Account Dashboard</h1>
 
 <h3>Acount Balance: $<%= @total %></h3>
+<h3>Expenditures This Month $<%= @expenditure %></h3>
 
 <div>
   <%= if @total < 0
     "No worries, the government doesn't know what positive income is either."
     end %>
+</div>
+
+<div>
+  Number of Transactions:
+  <%= Transaction.count %>
 </div>
 
 

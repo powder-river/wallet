@@ -13,4 +13,16 @@ class TransactionTest < ActiveSupport::TestCase
   test "get acount total" do
     assert_equal 250.0 , Transaction.total
   end
+
+  test "get account count" do
+    assert_equal 2, Transaction.count
+  end
+
+  test "get amount spent this month" do
+    petsmart = Transaction.create(name: "PetSmart", negotiation: -200)
+    starbucks = Transaction.create(name: "Starbucks", negotiation: -100)
+    paycheck = Transaction.create(name: "Job", negotiation: 50)
+    assert_equal -200, petsmart.negotiation
+    assert_equal -300, Transaction.spent_this_month
+  end
 end

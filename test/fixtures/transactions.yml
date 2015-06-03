@@ -2,7 +2,7 @@
 
 one:
   name: MyString
-  negotiation: 100.0
+  negotiation: 100
 
 two:
   name: MyString
