@@ -18,12 +18,9 @@ class Transaction < ActiveRecord::Base
     var = self.all.select do |d|
       if d.negotiation < 0 && d.created_at.month == Time.now.month
         d
+      end
     end
-  end
-
-
-      var.reduce(0) {|sum, t| sum + t.negotiation}
-
+    var.reduce(0) {|sum, t| sum + t.negotiation}
   end
 
 
