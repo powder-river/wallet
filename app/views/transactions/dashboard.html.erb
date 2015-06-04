@@ -1,9 +1,14 @@
 <h1>Account Dashboard</h1>
 
-<h3>Acount Balance: $<%= @total %></h3>
-<h3>Expenditures This Month $<%= @expenditure %></h3>
 
-<div>
+<div class="account_info">  
+  <h3>Acount Balance: $<%= @total %></h3>
+  <h3>Expenditures This Month: $<%= @expenditure %></h3>
+  <h3>Largest Expense: $<%= @biggest_cost %></h3>
+</div>
+
+
+<div class="in_the_red">
   <%= if @total < 0
     "No worries, the government doesn't know what positive income is either."
     end %>

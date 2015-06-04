@@ -37,6 +37,6 @@ class TransactionTest < ActiveSupport::TestCase
     petsmart = Transaction.create(name: "PetSmart", negotiation: -200)
     starbucks = Transaction.create(name: "Starbucks", negotiation: -100)
     paycheck = Transaction.create(name: "Job", negotiation: 50)
-    assert_equal "PetSmart", Transaction.biggest_expense
+    assert_equal -200, Transaction.biggest_expense
   end
 end

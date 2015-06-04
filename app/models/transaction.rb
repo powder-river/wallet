@@ -35,7 +35,7 @@ class Transaction < ActiveRecord::Base
   def self.biggest_expense
     array = self.all.map {|n| n.negotiation}
     array = array.sort
-    array = array[-1]
+    array = array[0]
     array.to_f
   end
 end

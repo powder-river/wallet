@@ -65,6 +65,7 @@ class TransactionsController < ApplicationController
   def dashboard
     @total = Transaction.total
     @expenditure = Transaction.spent_this_month
+    @biggest_cost = Transaction.biggest_expense
   end
 
 
